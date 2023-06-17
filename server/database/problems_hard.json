@@ -1,0 +1,170 @@
+[
+    {
+        "problem_id": 3000,
+        "problem_name": "Full Bookshelf",
+        "problem_description": "You have a bookshelf in your room that you use to hold all your books. However, as you get older and start to read books with more and more pages, your bookshelf doesn’t seem to have enough room anymore.\n\n\\\nGiven a bookshelf with a certain number of rows, each of which a certain width, find out if it is possible to keep all of your books on the bookshelf, and if not, the least amount of books that you must get rid of in order to fit the rest.\n\n### Input\n\nThis problem accepts three parameters: `numRows` (Integer), `rowSize` (Integer), and `bookSize` (Array of Integers).\n\n1. `numRows`: The number of rows for the bookshelf.\n2. `rowSize`: The width of each row on the bookshelf.\n3. `bookSize`: The list of widths for all the books you are attempting to place on the bookshelf.\n\n### Output\n\nThis problem outputs an Integer.\n\n\\\nIf you are able to fit all of the books on the bookshelf, output `0`. Otherwise, output the least amount of books that you must remove to fit the rest on the bookshelf.\n\n### Example Test Case\n\n**Input**\n\n`numRows`: `3`\n\n`rowSize`: `20`\n\n`bookSize`: `[7, 8, 6, 7, 9, 8, 7, 6]`\n\n**Output**\n\n`1`\n\n**Explanation**\n\nThere is a single book that cannot fit. One arrangement is the first bookshelf has `[7, 7, 6]` (sum 20), the second bookshelf has `[8, 9]` (sum 17), and the final bookshelf has `[7, 8]` (sum 15), with a `6` book leftover.\n\n\\\n*This problem was adapted from TeamsCode’s [Fall 2017 MIHS Programming Contest](https://teamscode.org/contests/fall-2017-mihs-programming-contest/).*",
+        "difficulty": "HARD",
+        "input_type": [
+            {
+                "name": "numRows",
+                "type": "INTEGER"
+            },
+            {
+                "name": "rowSize",
+                "type": "INTEGER"
+            },
+            {
+                "name": "bookSize",
+                "type": "ARRAY_INTEGER"
+            }
+        ],
+        "output_type": "INTEGER",
+        "test_inputs": [
+            "3\n20\n[7, 8, 6, 7, 9, 8, 7, 6]",
+            "2\n30\n[5, 6, 4, 1, 7, 12, 6, 2, 9, 5, 3]",
+            "4\n10\n[15, 11, 2, 6, 9, 1, 13, 5, 3]",
+            "5\n5\n[5, 5, 5, 7, 5, 5, 4, 1, 1, 4]",
+            "3\n14\n[7, 6, 4, 3, 7, 6, 4, 3, 2]",
+            "1\n30\n[31, 10, 32, 10, 54, 10, 1, 1, 1, 1, 5]"
+        ],
+        "test_outputs": ["1", "0", "3", "3", "0", "4"],
+        "test_explanation": [
+            "There is a single book that cannot fit. One arrangement is the first bookshelf has [7, 7, 6] (sum 20), the second bookshelf has [8, 9] (sum 17), and the final bookshelf has [7, 8] (sum 15), with a \"6\" book leftover.",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 3001,
+        "problem_name": "Hiking",
+        "problem_description": "You are going on a hike on Mount Rainer. Unfortunately, you have an old backpack that only can carry 20 pounds worth of equipment. Your job is to decide which items to bring along to maximize the value of things you are bringing your backpack.\n\n### Input\n\nThis problem has two parameters: `objWeight` (ArrayInteger) and `objValue` (ArrayInteger).\n\n1. `objWeight`: A list of the weights of all the items, matched by their index.\n2. `objValue`: A list of the values of all the items, also matched by their index.\n\nTo clarify, `objValue[0]` and `objWeight[0]` represent the value and weight of item 0 respectively.\n\n### Output\n\nThis problem outputs an Integer.\n\n\\\nPlease output the maximum value of all the objects you can put in your backpack without going over the 20 pound weight limit.\n\n### Example Test Case\n\n**Input**\n\n`objWeight`: `[5, 10, 3, 7, 4]`\n\n`objValue`: `[6, 11, 2, 4, 5]`\n\n**Output**\n\n`22`\n\n**Explanation**\n\nWe can bring the items that weigh 5, 10, and 4 pounds, bringing the total value to 22.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/assets/docs/spring_2017_mihs/problem_set.pdf).*",
+        "difficulty": "HARD",
+        "input_type": [
+            {
+                "name": "objWeight",
+                "type": "ARRAY_INTEGER"
+            },
+            {
+                "name": "objValue",
+                "type": "ARRAY_INTEGER"
+            }
+        ],
+        "output_type": "INTEGER",
+        "test_inputs": [
+            "[5, 10, 3, 7, 4]\n[6, 11, 2, 4, 5]",
+            "[12, 5, 7, 4, 8]\n[2, 12, 7, 2, 9]",
+            "[9, 7, 10, 4, 2]\n[12, 3, 4, 8, 3]",
+            "[6, 3, 8, 5, 7]\n[8, 5, 9, 6, 7]",
+            "[10, 2, 5, 4, 3]\n[17, 5, 7, 6, 4]"
+        ],
+        "test_outputs": ["22", "28", "23", "23", "33"],
+        "test_explanations": [
+            "We can bring the items that weigh 5, 10, and 4 pounds, bringing the total value to 22.",
+            "We can bring the items that weigh 5, 7, and 8 pounds, bringing the total value to 28.",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 3002,
+        "problem_name": "Underground Maze",
+        "problem_description": "You are trapped in an underground labyrinth and need to get above ground fast. You must find your way through an 8x8 maze.\n\n### Input\n\nThis problem accepts one parameter: `maze` (Array of Strings).\n\n1. `maze`: The maze, which is shown in an array of strings. In the maze, ‘S’ represents the starting position, ‘X’ represents the ending position, ‘#’ represents a wall, and there is a ‘.’ at every place you are allowed to move to.\n\n### Output\n\nThis problem outputs an Array of Strings.\n\n\\\nThe maze with a space replacing each dot ‘.’ you must pass in order to get from start to finish. The ‘S’ should be replaced with a space and the ‘X’ should be replaced with the ‘S’.\n\n### Example Test Case\n\n**Input**\n\n`maze`:\n\n```\n########\n#S.....#\n######.#\n##X###.#\n##.#...#\n##.###.#\n#......#\n########\n```\n\n\\\n**Output**\n\n```\n########\n#       \n###### #\n##S### #\n## #.. #\n## ### #\n#. #    \n########\n```\n\n\\\n**Explanation**\n\nFor both mazes, the most optimal path from start to finish is listed via the spaces. The spaces represent the spots that the person **must** go through in order to complete the underground maze.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "HARD",
+        "input_type": [
+            {   
+                "name": "maze",
+                "type": "ARRAY_STRING"
+            }
+        ],
+        "output_type": "ARRAY_STRING",
+        "test_inputs": [
+            "[\"########\", \"#S.....#\", \"######.#\", \"##X###.#\", \"##.#...#\", \"##.###.#\", \"#......#\", \"########\"]",
+            "[\"########\", \"#.....S#\", \"###.####\", \"#...#..#\",\" #.##...#\", \"#.#..#.#\", \"#....#X#\", \"########\"]",
+            "[\"########\", \"#S.....#\", \"##.#.###\", \"##.###.#\", \"##.....#\", \"######.#\", \"#X.....#\", \"########\"]",
+            "[\"########\", \"#......#\", \"##.#.#.#\", \"#..#.#S#\", \"#.######\", \"#...#.X#\", \"#.#...##\", \"########\"]"
+        ],
+        "test_outputs": [
+            "[\"########\", \"#      #\", \"###### #\", \"##S### #\", \"## #.. #\", \"## ### #\", \"#.     #\", \"########\"]",
+            "[\"########\", \"#..    #\", \"### ####\", \"#   #..#\", \"# ##   #\", \"# #. # #\", \"#    #S#\", \"########\"]",
+            "[\"########\", \"#  ....#\", \"## #.###\", \"## ###.#\", \"##     #\", \"###### #\", \"#S     #\", \"########\"]",
+            "[\"########\", \"#.     #\", \"## #.# #\", \"#  #.# #\", \"# ######\", \"#   # S#\", \"#.#   ##\", \"########\"]"
+        ],
+        "test_explanations": [
+            "The most optimal path without using all the dots is shown, where the 'X' was replaced with an 'S' to finish out, and the path was traced with the blank spaces, while the path not used was still marked as '.'.",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 3003,
+        "problem_name": "Binary Code",
+        "problem_description": "You are passed a string of 0s and 1s. However, this binary string passed to you is incomplete. Given the correct string, your job is to determine whether it is possible to modify the incomplete binary string to make it equal to the correct version using only two modification techniques:\n\n1. Adding the characters `10` to the end of the string\n2. Moving the last digit of the string to the beginning.\n\n\\\nFor example, you could change `011` to `01110` by adding `10` or change `011` to `101` by moving the last digit to the beginning.\n\n### Input\n\nThis problem accepts two parameters: `incompStr` (String) and `compStr`(String). \\n 1.`incompStr`: The incomplete string that you are trying to modify.\n\n2\\. `compStr`: The complete string that you are trying to get to.\n\n### Output\n\nThis problem outputs a Boolean.\n\n\\\nReturn `true` if the two combinations specified above can turn the incomplete string into the complete one. Otherwise, return `false`.\n\n### Example Test Case\n\n**Input**\n\n`compStr`: `1011`\n\n`inompStr`: `1001110`\n\n**Output**\n\n`false`\n\n**Explanation**\n\nThere is no combination of modifications that can change `compStr` to `incompStr`.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/assets/docs/spring_2017_mihs/problem_set.pdf).*",
+        "difficulty": "HARD",
+        "input_type": [
+            {
+                "name": "incompStr",
+                "type": "STRING"
+            },
+            {
+                "name": "compStr",
+                "type": "STRING"
+            }
+        ],
+        "output_type": "BOOLEAN",
+        "test_inputs": [
+            "1011\n1001110",
+            "1010\n10010101",
+            "111\n010111010", 
+            "011101101\n011001",
+            "011\n110011010"
+        ],
+        "test_outputs": [
+            "false",
+            "true",
+            "false",
+            "false",
+            "true"
+        ],
+        "test_explanations": [
+            "There is no combination of modifications that can change compStr to incompStr.",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 3004,
+        "problem_name": "Road Race",
+        "problem_description": "You are competing with your friend to see who can travel across the United States and make it through all the major cities the fastest. Your starting position is in Seattle and your ultimate target is Miami.\n\n\\\nHowever, there are no direct paths to Miami; you must travel through other cities on your way there. You must return the cities that you travel through which allows you to take the shortest route from Seattle to Miami.\n\n### Input\n\nThis problem accepts two parameters: `n` (Integer) and `routes` (Array of Strings).\n\n1. `n`: The number of routes that will be listed.\n2. `routes`: This array of strings contains `n` amount of strings, and each string contains a city name, followed by a space and another city name, with an integer afterwards representing the distance between the two cities.\n\n### Output\n\nThis problem output is a String.\n\n\\\nReturn the cities (in order and space-separated) that you must travel through that allows you to take the shortest route to Miami. Include Seattle at the beginning and Miami at the end. Afterwards, add the length of the shortest length.\n\n### Example Test Case\n\n**Input**\n\n`n`: `9`\n\n`routes`:\n\n```\nBoise Detroit 13\nSeattle Sacramento 10\nPhoenix Dallas 18\nDetroit Sacramento 15\nSeattle Portland 5\nMiami Detroit 14\nDallas Miami 8\nPhoenix Seattle 12\nDallas Boise 7\n```\n\n**Output**\n\n`Seattle Phoenix Dallas Miami 38`\n\n**Explanation**\n\nThe quickest route from Seattle to Miami is going from Seattle → Phoenix (12), Phoenix → Dallas (18), Dallas → Miami (8), so the final distance would be 12 + 18 + 8 = 38. This is why we would print `Seattle Phoenix Dallas Miami 38`.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "HARD",
+        "input_type": [
+            {
+                "name": "n",
+                "type": "INTEGER"
+            },
+            {
+                "name": "routes",
+                "type": "ARRAY_STRING"
+            }
+        ],
+        "output_type": "STRING",
+        "test_inputs": [
+            "9\n[\"Boise Detroit 13\", \"Seattle Sacramento 10\", \"Phoenix Dallas 18\", \"Detroit Sacramento 15\", \"Seattle Portland 5\", \"Miami Detroit 14\", \"Dallas Miami 8\", \"Phoenix Seattle 12\", \"Dallas Boise 7\"]",
+            "16\n[\"Seattle Sacramento 13\", \"Phoenix Dallas 15\", \"Boise Manhattan 1\", \"Denver Boston 20\", \"Detroit Sacramento 16\", \"Miami Detroit 11\", \"Manhattan Chicago 19\", \"Denver Chicago 17\", \"Seattle Miami 1000\", \"Denver Seattle 10\", \"Manhattan Dallas 23\", \"Boston Atlanta 9\", \"Dallas Miami 12\", \"Chicago Sacramento 21\", \"Phoenix Seattle 14\", \"Miami Boston 9\"]"
+        ],
+        "test_outputs": [
+            "\"Seattle Phoenix Dallas Miami 38\"",
+            "\"Seattle Denver Boston Miami 39\""
+        ],
+        "test_explanations": [
+            "The quickest route from Seattle to Miami is going from Seattle → Phoenix (12), Phoenix → Dallas (18), Dallas → Miami (8), so the final distance would be 12 + 18 + 8 = 38. This is why we would print \"Seattle Phoenix Dallas Miami 38\".",
+            ""
+        ]
+    }
+]

@@ -1,0 +1,251 @@
+[
+    {
+        "problem_id": 1000,
+        "problem_name": "Compound Interest",
+        "problem_description": "Suppose Michael has `p` dollars to invest in an account that pays `r`% interest compounded `n` times per year. How much money does Michael have after `t` years?\n\n\\\nThe formula for compounded interest is: `A = p (1 + r/n)^(n*t)`.\n\n### Input\n\nThis problem accepts four parameters: `p` (Integer), `n` (Integer), and `r` (Double), `t` (Integer).\n\n1. `p`: The initial investment into the bank account.\n2. `n`: The number of times interest is compounded annually.\n3. `r`: The interest rate provided.\n4. `t`: The time in years since the initial investment was deposited into the account.\n\n### Output\n\nThe problem output is an Integer.\n\n\\\nOutput the amount of money in the account after `t` years rounded down to the nearest Integer.\n\n### Example Test Case\n\n**Input**\n\n`p`: `1000`\n\n`n`: `4`\n\n`r`: `0.035`\n\n`t`: `5`\n\n**Output**\n\n`1190`\n\n**Explanation**\n\nPlugging the input parameters into the equation provided, we get the following:\n\n```\nA = 1000 * (1 + 0.035/4) ^(4*5)\n= 1000 * (1.00875 ^ 20)\n= 1000 * 1.1903398\n= 1190.3398\n= 1190 (rounded down)\n```\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "EASY",
+        "input_type": [
+            {
+                "name": "p",
+                "type": "INTEGER"
+            },
+            {
+                "name": "n",
+                "type": "INTEGER"
+            },
+            {
+                "name": "r",
+                "type": "INTEGER"
+            },
+            {
+                "name": "t",
+                "type": "INTEGER"
+            }
+        ],
+        "output_type": "INTEGER",
+        "test_inputs": [
+            "1000\n4 \n0.035\n5",
+            "2500\n2\n0.05\n10",
+            "1500\n2 \n0.045\n10",
+            "3000\n4\n0.025\n2",
+            "1250\n10\n0.08\n5",
+            "15000 \n15\n0.015\n4"
+        ],
+        "test_outputs": [
+            "1190",
+            "4096",
+            "2340",
+            "3153",
+            "1861",
+            "15927"
+        ],
+        "test_explanation": [
+            "Plugging the input parameters into the equation provided, we get the following:\n\nA = 1000 * (1 + 0.035/4) ^(4*5)\n= 1000 * (1.00875 ^ 20)\n= 1000 * 1.1903398\n= 1190.3398\n= 1190 (rounded down).",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 1001,
+        "problem_name": "Distance to Shore",
+        "problem_description": "In​ ​​*Distance*​ ​*to*​ ​*Shore*​,​ ​you​ ​are​ ​in​ ​a​ ​boat​ ​a​ ​certain​ ​distance​ ​from​ ​shore.​ ​On​ ​the​ ​shore​ ​there​ ​is​ ​a house,​ ​and​ ​a​ ​little​ ​farther​ ​to​ ​the​ ​left​ ​is​ ​a​ ​lighthouse.​ ​The​ ​boat,​ ​the​ ​house,​ ​and​ ​the​ ​lighthouse​ ​form a​ ​right​ ​triangle.​ ​You​ ​know​ ​the​ ​distances​ ​between​ ​two​ ​of​ ​the​ ​different​ ​objects,​ ​and​ ​must​ ​find​ ​the​ ​third using​ ​the​ ​Pythagorean​ ​Theorem.\n\n### Input\n\nThis problem accepts three integers `a`, `b`, and `c`, where `a` and `b` are the legs of the right triangle and `c` is the hypotenuse. Two of these three values will be specified, and one of them will be unknown (set to `-1`).\n\n\\\n*Note: Only one of the numbers will be set to* `-1` *to avoid confusion.*\n\n### Output\n\nYour program should output the length of the unknown side of the triangle, rounded **down** to the nearest integer.\n\n### Example Test Case\n\n**Input**\n\n`a`: `15.2`\n\n`b`: `-1`\n\n`c`: `18.3`\n\n**Output**\n\n`10`\n\n**Explanation**\n\nBy the Pythagorean Theorem, `15.2^2 + b^2 = 18.3^2`. Solving for `b` and rounding down, the answer we get is `10`.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "EASY",
+        "input_type": [
+            {
+                "name": "a",
+                "type": "INTEGER"
+            },
+            {
+                "name": "b",
+                "type": "INTEGER"
+            },
+            {
+                "name": "c",
+                "type": "INTEGER"
+            }
+        ],
+        "output_type": "INTEGER",
+        "test_input": [
+            "15.2\n-1\n18.3",
+            "12\n5\n-1",
+            "-1\n19.5\n30.1",
+            "33\n-1\n55",
+            "1\n1\n-1"
+        ],
+        "test_output": [
+            "10",
+            "13",
+            "22",
+            "44",
+            "1"
+        ],
+        "test_explanation": [
+            "By the Pythagorean Theorem, 15.2^2 + b^2 = 18.3^2. Solving for b and rounding down, the answer we get is 10.",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 1002,
+        "problem_name": "Texas Hold'em",
+        "problem_description": "You are playing a game of Texas Hold'em poker against your friend. There are five cards on the flop and you and your friend both have two cards in hand.\n\n\\\nYou know that you have a pair or a triple, but need to find what is the highest pair or triple you have in a hand of seven cards. In Texas Hold’em, 2 is the lowest card and ace is the highest.\n\n\\\nFind the highest pair you have in a hand of five cards, or the highest triple if it exists.\n\n### Input\n\nThis problem accepts one parameter: `cards` (Array of Strings).\n\n1. `cards`: The sequence of seven cards the user has in their hand and on the flop.\n\n### Output\n\nThis problem outputs an Array of Strings.\n\n\\\nOutput the Array of Strings representing the highest pair you have in a hand of five cards, or the highest triple if it exists.\n\n### Example Test Case\n\n**Input**\n\n`cards`: `[\"10\", \"10\", \"9\", \"9\", \"A\", \"J\", \"K\"]`\n\n**Output**\n\n`[\"10\", \"10\"]`\n\n**Explanation**\n\nThere are no triples in the list of cards and the highest pairs are the \"10\" numbers.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/fall-2017-mihs-programming-contest/).*",
+        "difficulty": "EASY",
+        "input_type": [
+            {
+                "name": "cards",
+                "type": "ARRAY_STRING"
+            }
+        ],
+        "output_type": "ARRAY_STRING",
+        "test_input": [
+            "[\"10\", \"10\", \"9\", \"9\", \"A\", \"J\", \"K\"]",
+            "[\"Q\", \"2\", \"J\", \"Q\", \"J\", \"Q\", \"A\"]",
+            "[\"2\", \"9\", \"3\", \"10\", \"3\", \"K\", \"K\"]",
+            "[\"10\", \"2\", \"A\", \"A\", \"8\", \"2\", \"A\"]",
+            "[\"9\", \"A\", \"10\", \"K\", \"A\", \"2\", \"9\"]",
+            "[\"3\", \"3\", \"7\", \"3\", \"7\", \"7\", \"3\"]"
+        ],
+        "test_output": [
+            "[\"10\", \"10\"]",
+            "[\"Q\", \"Q\", \"Q\"]",
+            "[\"K\", \"K\"]",
+            "[\"A\", \"A\", \"A\"]",
+            "[\"A\", \"A\"]",
+            "[\"7\", \"7\", \"7\"]"
+        ],
+        "test_explanation": [
+            "There are no triples in the list of cards and the highest pairs are the \"10\" numbers.",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 1003,
+        "problem_name": "Triangle Creator",
+        "problem_description": "You have a math exam next period, and your friend tells you one of the questions, but forgets the exact values. He tells you that one of the problems asks to draw a triangle of N height. Create a program that will return a triangle, given N.\n\n### Input\n\nThis problems accepts one parameter: `triangleSize`  (Integer).\n\n1. `triangleSize`: The height of the triangle in lines. This integer will be greater than 0.\n\n### Output\n\nThis problem outputs a String. The String should draw a triangle of `triangleSize` height when printed out and should have ‘/’ and ‘\\\\’ for the sides and ‘_’ for the bottom. There should be no extraneous spaces when the triangle is printed out.\n\n### Example Test Case\n\n**Input**\n\n`triangleSize`: `3`\n\n**Output**\n\n“/\\\\n /  \\\\n/____\\\\n“\n\n**Explanation**\n\nWhen printed out, this string turns into:\n\n```javascript\n  /\\\n /  \\\n/____\\\n```\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "EASY",
+        "input_type": [
+            {
+                "name": "triangleSize",
+                "type": "INTEGER"
+            }
+        ],
+        "output_type": "STRING",
+        "test_input": [
+            "3",
+            "2"
+        ],
+        "test_output": [
+            "  /\\\n /  \\\n/____\\",
+            " /\\\n/__\\"
+        ],
+        "test_explanation": [
+            "When printed out, this string turns into:\n\n  /\\\n /  \\\n/____\\",
+            ""
+        ]
+    },
+    {
+        "problem_id": 1004,
+        "problem_name": "Money Counting",
+        "problem_description": "At the end of a long yard sale, you want to see how much money you’ve made in total. You are given the individual cost of each item you sold, and your job is to determine the total amount of money from all of those items.\n\n### Input\n\nThis problem accepts one parameter as input: `costs`(a list of Integers).\n\n`costs`: List of integers where each element denotes the cost of one yard sale item sold.\n\n### Output\n\nPlease return the sum of costs as an `Integer`.\n\n### Example Test Case\n\n**Input**\n\n`costs`: `[1, 3, 5, 7]`\n\n**Output**\n\n`16`\n\n**Explanation**\n\nThe individual cost of each item at the yard sale is $1, $3, $5, and $7. Taking the sum of all these, we find that we made $16 at this yard sale. Thus, the value returned by the method should be `16` in this case.",
+        "difficulty": "EASY",
+        "input_type": [
+            {
+                "name": "costs",
+                "type": "ARRAY_INTEGER"
+            }
+        ],
+        "output_type": "INTEGER",
+        "test_input": [
+            "[1, 3, 5, 7]",
+            "[3, 1, 1, 4, 5, 11, 3, 2, 2, 6, 5, 1]",
+            "[11, 24, 20, 9, 3, 3, 16, 5, 14, 17, 2, 3, 9, 29, 6, 42]",
+            "[5, 24, 6, 7, 17, 8, 9, 9, 9, 9, 13, 56, 5, 19, 20, 89, 36, 54, 15, 16, 72, 84, 23]"
+        ],
+        "test_output": [
+            "16",
+            "44",
+            "213",
+            "605"
+        ],
+        "test_explanation": [
+            "The individual cost of each item at the yard sale is $1, $3, $5, and $7. Taking the sum of all these, we find that we made $16 at this yard sale.",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 1005,
+        "problem_name": "Find Longest String",
+        "problem_description": "Find and return the longest String in an array of Strings.\n\n### Input\n\nThis problem accepts 1 parameter: `list` (ArrayString).\n\n1. `list`: The input list of strings, guaranteed to have at least one element.\n\n### Output\n\nThis problem outputs a String.\n\n\\\nThe problem outputs the longest String in the provided input. If there are multiple Strings of the same length, return the last String of that length in the array.\n\n### Example Test Case\n\n**Input**\n\n`name`: `[“short”, “tiny”, “longest”, “medium”]`\n\n**Output**\n\n`“longest”`\n\n**Explanation**\n\nSince the String `“longest”` was the longest String in the list (with length 7), the user outputs that String.",
+        "difficulty": "EASY",
+        "input_type": [
+            {
+                "name": "list",
+                "type": "ARRAY_STRING"
+            }
+        ],
+        "output_type": "STRING",
+        "test_input": [
+            "[\"short\", \"tiny\", \"longest\", \"medium\"]",
+            "[\"one\", \"two\", \"three\", \"four\", \"five\", \"six\", \"seven\", \"eight\", \"nine\", \"ten\"]",
+            "[\"hide\"]",
+            "[\"CodeJoust\", \"is\", \"a\", \"pretty\", \"cool\", \"platform\"]",
+            "[\"today\", \"is\", \"the\", \"day\"]",
+            "[\"a\", \"b\", \"c\"]"
+        ],
+        "test_output": [
+            "\"longest\"",
+            "\"eight\"",
+            "\"hide\"",
+            "\"CodeJoust\"",
+            "\"today\"",
+            "\"c\""
+        ],
+        "test_explanation": [
+            "Since the String “longest” was the longest String in the list (with length 7), the user outputs that String.",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 1006,
+        "problem_name": "Implement Merge Sort",
+        "problem_description": "Merge sort is one of the core sorting algorithms in computer science. It involves recursively breaking down the problem into smaller steps, sorting those smaller pieces, and then combining all parts into a final, sorted list. From class notes, remember that merge sort is a Divide and Conquer algorithm. \n\n\\\nYour task in this exercise is to write a method called `solve` that takes in an array of integers, implements merge sort, and finally returns the sorted array. \n\n\\\n**Example Test Case:**\n\n\\\nInput:\n\n```\n[5, 2, 1, 8, 7, 4, 3, 6]\n```\n\n\\\nReturns:\n\n```\n[1, 2, 3, 4, 5, 6, 7, 8]",
+        "difficulty": "EASY",
+        "input_type": [
+            {
+                "name": "array",
+                "type": "ARRAY_INTEGER"
+            }
+        ],
+        "output_type": "ARRAY_INTEGER",
+        "test_input": [
+            "[5, 2, 1, 8, 7, 4, 3, 6]",
+            "[1, 2]",
+            "[1]"
+        ],
+        "test_output": [
+            "[1, 2, 3, 4, 5, 6, 7, 8]",
+            "[1, 2]",
+            "[1]"
+        ],
+        "test_explanation": [
+            "",
+            "",
+            ""
+        ]
+    }
+]

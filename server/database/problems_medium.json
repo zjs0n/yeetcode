@@ -1,0 +1,197 @@
+[
+    {
+        "problem_id": 2000,
+        "problem_name": "Decoder",
+        "problem_description": "You are sent a message by your company, however, your company’s message has to be decoded. The message is all numbers, and each number corresponds to a letter like follows: a = 1, b = 2, c = 3, and so on. Also, a “SPACE” = 27, and a period = 28. You must decode the message, and return the decoded message.\n\n### Input\n\nThis problem has one parameter: `message` (Array of Integers).\n\n1. `message`: An array of integers denoting each of the characters in the random message you have to decode.\n\n### Output\n\nThis problem returns a String.\n\n\\\nPlease return the decoded message as a String. You do not need to worry about correct capitalization.\n\n### Example Test Case\n\n**Input**\n\n`message` : `[8, 5, 12, 12, 15, 27, 16, 5, 18, 19, 15, 14, 28, 27, 27, 20, 8, 9, 19, 27, 9, 19, 27, 20, 8, 5, 27, 13, 5, 19, 19, 1, 7, 5, 27, 9, 27, 23, 1, 14, 20, 27, 20, 15, 27, 19, 8, 1, 18, 5, 27, 23, 9, 20, 8, 27, 25, 15, 21, 28]`\n\n**Output**\n\n`\"hello person. this is the message i want to share with you.\"`\n\n**Explanation**\n\nAfter decoding the message with the rules written (8 = h, 5 = e, and so on), the message says \"hello person. this is the message i want to share with you.\"\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "MEDIUM",
+        "input_type": [
+            {
+                "name": "message",
+                "type": "ARRAY_INTEGER"
+            }
+        ],
+        "output_type": "STRING",
+        "test_input": [
+            "[8, 5, 12, 12, 15, 27, 16, 5, 18, 19, 15, 14, 28, 27, 27, 20, 8, 9, 19, 27, 9, 19, 27, 20, 8, 5, 27, 13, 5, 19, 19, 1, 7, 5, 27, 9, 27, 23, 1, 14, 20, 27, 20, 15, 27, 19, 8, 1, 18, 5, 27, 23, 9, 20, 8, 27, 25, 15, 21, 28]",
+            "[9, 27, 18, 5, 1, 12, 12, 25, 27, 12, 15, 22, 5, 27, 20, 15, 27, 4, 15, 27, 16, 18, 15, 7, 18, 1, 13, 13, 9, 14, 7, 27, 3, 15, 13, 16, 5, 20, 9, 20, 9, 15, 14, 19, 28]"
+            ],
+        "test_output": [
+            "\"hello person.  this is the message i want to share with you.\"",
+            "\"i really love to do programming competitions.\""
+        ],
+        "test_explanation": [
+            "After decoding the message with the rules written (8 = h, 5 = e, and so on), the message says \"hello person. this is the message i want to share with you.\"",
+            "The message says \"i really love to do programming competitions.\" after you decode it with the rules given."
+        ]
+    },
+    {
+        "problem_id": 2001,
+        "problem_name": "Pattern Sequence",
+        "problem_description": "You have created a survey that asks 20 participants to rate their level of happiness in school from 0 to 10. Your goals is to find the longest recurring pattern of values from the sequence of 20 values given by the participants.\n\n\\\nYour requirements for a recurring pattern is that the pattern of numbers occurs at least twice in sequence of 20 values. Given the sequence of 20 numbers, find how many numbers is in the longest recurring pattern.\n\n### Input\n\nThis problem accepts one parameter: `sequence` (Array of Integers)\n\n1. `sequence`: The list of numbers where each number represents a participant’s happiness level in school. Guaranteed to be non-empty.\n\n### Output\n\nThis problem outputs an Array of Integers.\n\n\\\nOutput the longest recurring pattern on the next line in the input of 20 values, with a space separating each value.\n\n### Example Test Case\n\n**Input**\n\n`4 5 2 4 5 4 3 9 10 3 2 6 2 7 6 9 4 5 2 4`\n\n**Output**\n\n`4 5 2 4`\n\n**Explanation**\n\nWe can see that the longest recurring pattern is `4 5 2 4`, which occurs twice in the sequence.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "MEDIUM",
+        "input_type": [
+            {
+                "name": "sequence",
+                "type": "ARRAY_INTEGER"
+            }
+        ],
+        "output_type": "ARRAY_INTEGER",
+        "test_input": [
+            "[4, 5, 2, 4, 5, 4, 3, 9, 10, 3, 2, 6, 2, 7, 6, 9, 4, 5, 2, 4]",
+            "[10, 10, 10, 3, 2, 1, 9, 1, 2, 0, 9, 2, 10, 10, 10, 3, 2, 1, 9, 6]",
+            "[1, 2, 1, 0, 9, 1, 0, 8, 2, 1, 8, 1, 2, 1, 0, 2, 9, 3, 5, 8]",
+            "[10, 7, 9, 10, 7, 9, 3, 2, 1, 0, 1, 1, 0, 9, 2, 1, 1, 8, 10, 7]",
+            "[0, 2, 4, 7, 8, 4, 7, 4, 7, 8, 2, 5, 7, 9, 6, 7, 5, 7, 4, 2]",
+            "[6, 8, 7, 8, 5, 3, 1, 6, 9, 0, 7, 5, 2, 6, 8, 0, 8, 9, 7, 5]"
+        ],
+        "test_output": [
+            "[4, 5, 2, 4]",
+            "[10, 10, 10, 3, 2, 1, 9]",
+            "[1, 2, 1, 0]",
+            "[10, 7, 9]",
+            "[4, 7, 8]",
+            "[6, 8]"
+        ],
+        "test_explanation": [
+            "We can see that the longest recurring pattern is [4, 5, 2, 4], which occurs twice in the sequence.",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 2002,
+        "problem_name": "Best Football Team",
+        "problem_description": "In your state, there are several school football teams. You want to find which team has the best record.\n\n\\\nGiven the results of the games, list the football teams in the order they appear, followed by their win / loss record. Assume there are no ties.\n\n### Input\n\nThis problem accepts one parameter: `records` (Array of Strings).\n\n1. `records`: The list of game records between football teams. Each element contains a String of the form: `[team1] defeated [team2]`.\n\n\\\nNote: All of the team names are single words, with no spaces. None of the team names contain the word “defeated”.\n\n### Output\n\nReturn an Array of Strings, where each string contains a team name, in the order they appear, followed by the number of games they won, a forward slash, and the number of games they lost.\n\n### Example Test Case\n\n**Input**\n\n`records`:\n\n```javascript\n[\"Thunderstrikes defeated Gorillas\",\n\"Termites defeated Earthquakes\",\n\"Waves defeated Emperors\",\n\"Earthquakes defeated Gorillas\",\n\"Thunderstrikes defeated Waves\",\n\"Termites defeated Emperors\",\n\"Thunderstrikes defeated Termites\"]\n```\n\n**Output**\n\n```\n[\"Thunderstrikes 3/0\",\n\"Gorillas 0/2\",\n\"Termites 2/1\",\n\"Earthquakes 1/1\",\n\"Waves 1/1\",\n\"Emperors 0/2\"]\n```\n\n**Explanation**\n\nThe *Thunderstrikes* defeated the *Gorillas*, the *Waves*, and the *Termites*. Since they have thus won three games, and lost zero games, they have a win / loss record of 3/0. Additionally, they appear first in the output list as they appear first on the list of records (with *Gorillas* second, *Termites* third, and so on).\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "MEDIUM",
+        "input_type": [
+            {
+                "name": "records",
+                "type": "ARRAY_STRING"
+            }
+        ],
+        "output_type": "ARRAY_STRING",
+        "test_input": [
+            "[\"Thunderstrikes defeated Gorillas\", \"Termites defeated Earthquakes\", \"Waves defeated Emperors\", \"Earthquakes defeated Gorillas\", \"Thunderstrikes defeated Waves\", \"Termites defeated Emperors\", \"Thunderstrikes defeated Termites\"]",
+            "[\"Falcons defeated Seahawks\", \"Patriots defeated Eagles\", \"Seahawks defeated Eagles\", \"Thunderstorm defeated Patriots\", \"Emperors defeated Seahawks\", \"Ice defeated Falcons\"]"
+        ],
+        "test_output": [
+            "[\"Thunderstrikes 3/0\", \"Gorillas 0/2\", \"Termites 2/1\", \"Earthquakes 1/1\", \"Waves 1/1\", \"Emperors 0/2\"]",
+            "[\"Falcons 1/1\", \"Seahawks 1/2\", \"Patriots 1/1\", \"Eagles 0/2\", \"Thunderstorm 1/0\", \"Emperors 1/0\", \"Ice 1/0\"]"
+        ],
+        "test_explanation": [
+            "The Thunderstrikes defeated the Gorillas, the Waves, and the Termites. Since they have thus won three games, and lost zero games, they have a win / loss record of 3/0. Additionally, they appear first in the output list as they appear first on the list of records (with Gorillas second, Termites third, and so on).",
+            ""
+        ]
+    },
+    {
+        "problem_id": 2003,
+        "problem_name": "Longest Common Subsequence",
+        "problem_description": "You are given two strings, both of which are a random jumble of letters. The two strings share a few common letters here and there. Your task is to find the longest common subsequence in both strings. This subsequence does not need to be continuous, but must be in order relative to the other common characters.\n\n### Input\n\nThere are two inputs for this problem: `str1` (String) and `str2` (String), each representing one string in the problem. The lengths of these two strings are not necessarily the same.\n\n### Output\n\nThe output for this problem is a String.\n\n\\\nPlease output the longest subsequence shared by both Strings. If there are multiple substrings of the same length, print the first occurring one.\n\n### Example Test Case\n\n**Input**\n\n`str1`: `sadkspoqe`\n\n`str2`: `kdkjjsceoe`\n\n**Output**\n\n`dksoe`\n\n**Explanation**\n\nIn this case, the longest subsequence is “dksoe” since those are in order and shared by both strings.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/assets/docs/spring_2017_mihs/problem_set.pdf).*",
+        "difficulty": "MEDIUM",
+        "input_type": [
+            {
+                "name": "str1",
+                "type": "STRING"
+            },
+            {
+                "name": "str2",
+                "type": "STRING"
+            }
+        ],
+        "output_type": "STRING",
+        "test_input": [
+            "\"sadkspoqe\"\n\"kdkjjsceoe\"",
+            "\"jsglfie\"\n\"kjqlwilpep\"",
+            "\"qwetrytyuipo\"\n\"txsyvduuaimo\"",
+            "\"mkozaq\"\n\"fmskolwopuzagfq\"",
+            "\"qfrsgfxefw\"\n\"polmgbyhki\""
+        ],
+        "test_output": [
+            "\"dksoe\"",
+            "\"jlie\"",
+            "\"tyuio\"",
+            "\"mkozaq\"",
+            "\"g\""
+        ],
+        "test_explanation": [
+            "In this case, the longest subsequence is “dksoe” since those are in order and shared by both strings.",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "problem_id": 2004,
+        "problem_name": "Changing a 2D Array",
+        "problem_description": "You are given a file with a 2D array. You must change the array in the following manner:\n\n* If the number is a multiple of 3, you must square that number.\n* If the number is a multiple of 5, you must take the nth root of the number.\n* If the number is a multiple of 3 AND 5, you must divide the number by 5.\n\nAll your numbers must be rounded to the nearest integer. ​0 is **not** considered a multiple of 3 or 5 or both.\n\n### Input\n\nThis problem accepts one parameters: `array` (Array of Strings).\n\n* `array` : The actual 2D Array, containing multiple strings representing the rows of the 2D Array. Each string contains multiple numbers separated by space, denoting the numbers in that row.\n\n### Output\n\nReturn an Array of Strings, where each string contains multiple numbers separated by space, denoting a row after the changes.\n\n### Example Test Case\n\n#### Input\n\n`array` :\n\n```javascript\n[\"5 ​71 ​2\",\n\"8 ​9 ​15\",\n\"2 ​20 ​1645\",\n\"57 ​40 ​105\"]\n```\n\n#### Output\n\n```javascript\n[\"5 ​71 ​2\",\n\"8 ​81 ​3\",\n\"2 ​3 ​12\",\n\"3249 ​3 ​21\"]\n```\n\n**Explanation**\n\nThe numbers changed are 5 → 5  in the first row, 9 → 81 and 15 → 3 in the second row, 20 → 3 and 1645 → 12 in the third row, and 57 → 3249 and 40 → 3 and 105 → 21 in the fourth row.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "MEDIUM",
+        "input_type": [
+            {
+                "name": "array",
+                "type": "ARRAY_STRING"
+            }
+        ],
+        "output_type": "ARRAY_STRING",
+        "test_input": [
+            "[\"5 ​71 ​2\", \"8 ​9 ​15\", \"2 ​20 ​1645\", \"57 ​40 ​105\"]",
+            "[\"7 ​35 ​89 ​15\", \"3 ​82 ​19 ​0\", \"71 ​20 ​9 ​9\", \"1 ​21 ​66 ​71\", \"0 ​1 ​9 ​5\", \"66 ​28 ​9 ​1\"]"
+        ],
+        "test_output": [
+            "[\"5 ​71 ​2\", \"8 ​81 ​3\", \"2 ​3 ​12\", \"3249 ​3 ​21\"]",
+            "[\"7 ​35 ​89 ​3\", \"9 ​82 ​19 ​0\", \"71 ​3 ​81 ​81\", \"1 ​441  4356 ​71\", \"0 ​1 ​81 ​1\", \"4356 ​28 ​81 ​1\"]"
+        ],
+        "test_explanation": [
+            "The numbers changed are 5 → 5  in the first row, 9 → 81 and 15 → 3 in the second row, 20 → 3 and 1645 → 12 in the third row, and 57 → 3249 and 40 → 3 and 105 → 21 in the fourth row.",
+            ""
+        ]
+    },
+    {
+        "problem_id": 2005,
+        "problem_name": "Find Prime",
+        "problem_description": "You are just learning what prime numbers are. In order to help you learn, you want to create a program to output the first `n` prime numbers. However, this comes with a twist. To showcase your coding skills, you want to square every number between the integers `k1` and `k2`.\n\n### Input\n\nThis problem accepts three parameters:  `n` (Integer), `k1` (Integer), and `k2` (Integer).\n\n1. `n`: The number of prime numbers you seek to output.\n2. `k1`: The lower bound for the range of prime numbers you will square.\n3. `k2`: The upper bound for the range of prime numbers you will square.\n\n### Output\n\nThis problem outputs a list of integers.\n\n\\\nPlease output an array of the first `n` prime numbers, except squaring every prime number between `k1` and `k2`.\n\n### Example Test Case\n\n**Input**\n\n`n`: `8`\n\n`k1`: `5`\n\n`k2`: `15`\n\n**Output**\n\n`[2, 3, 25, 49, 121, 169, 17, 19]`\n\n**Explanation**\n\nThe first 8 primes are 2, 3, 5, 7, 11, 13, 17, and 19. Since `k1` and `k2` are `5` and `15` respectively, we square the numbers between `5` and `15`, then output the array.\n\n\\\n*This problem was adapted from TeamsCode’s [Spring 2017 MIHS Programming Contest](https://teamscode.org/contests/spring-2017-mihs-programming-contest/).*",
+        "difficulty": "MEDIUM",
+        "input_type": [
+            {
+                "name": "n",
+                "type": "INTEGER"
+            },
+            {
+                "name": "k1",
+                "type": "INTEGER"
+            },
+            {
+                "name": "k2",
+                "type": "INTEGER"
+            }
+        ],
+        "output_type": "ARRAY_INTEGER",
+        "test_input": [
+            "8\n5\n15",
+            "3\n1\n5",
+            "21\n60\n70",
+            "11\n3\n11",
+            "10\n24\n28",
+            "1\n3\n1000"
+        ],
+        "test_output": [
+            "[2, 3, 25, 49, 121, 169, 17, 19]",
+            "[4, 9, 25]",
+            "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 3721, 4489, 71, 73]",
+            "[2, 9, 25, 49, 121, 13, 17, 19, 23, 29, 31]",
+            "[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]",
+            "[2]"
+        ],
+        "test_explanation": [
+            "The first 8 primes are 2, 3, 5, 7, 11, 13, 17, and 19. Since K1 and K2 are 5 and 15 respectively, we square the numbers between 5 and 15, then output the array.",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    }
+]
